@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "discord-management-a1f7a",
+    "private_key_id": "31a324d93846eac6f66400398b14dc06318b7306",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC7q4Hs8Bdc3Z6M\nbFpWgD7H6WT2xvuMwOjV4VLzHo7cuNfLh7NKuTRt2lapJ14kprErZ7+V6e6hilC5\nQsDV/UBeU93ZkseaTx4mf/FKx12qdtWGSiMr06oWQUfoq+NO3tEjO1PA19XhAAnk\nRHupwWNtgcsR5P9KZ4zNa7iZhFLKxf8rtekc4YbCXgHmXyy8Cvo3x/4VIYTHP+Dv\n0DMMhk+2utLQR4xfAaZ2ZyF1LMZtrvgz+4Do0ko95FBmtUmMrRDqCOYBBX7UwvOB\nJ71WwmY0a6CdXF2kbHoEuma4oOClmhcumDuQu3rl2rUVotSzYk8PjVBAI3aEUYpt\n1uTPvxd5AgMBAAECggEAEwN+LzMSAuLMjfM/tyouHNNM2zhvbaQb0ujjHmZMWMN8\n0Djy6tFXJQFtLJ0kS3f8qjuhgameTOKLvtarB+MtKCwSEC7v/HZ4ml5LDuWiW+4c\nlbWhg5lhzvhqiyxjDsTCEUeQ+uWYhz/EQMrJcU+lEwgGkCJl1Ql8Y/w+ddtIshTE\niigntI1EnOmvpXxcvmbkwHClbu1KDVcrazZPr7MHdsjxaNDH/AquJrf/vmR+yfhv\nPJLNx7x1Js72FwfMYw5UJYP+4ntrXsBGXr6UCu/Yy3qe1flckQ9h8t97rL0sr9TF\na74szUvj8S14aN84+gzDMczovLm3GC9YcwG4WkGzwwKBgQDlGhw/N3x2NG28kmVM\nMVNY6Z3eBPuFpQPsScMPxflHV7YVpqbHXd3AT52Gz7Kk4CaMIJ5c/0vNxssRB41J\ncjh/+LABYAzdSMfLRu6CittWhBauPb/va10147IPOeDIhKbA8tNJOWYEosVOfxwL\ngpeIJ5d89zjfpquQeUdEybUM5wKBgQDRtB2eH1GMpM2YNWhs3bpNwz3GJKUP/X0u\nWDgD2/ABBU3e4CW3LShQBYIziol9AdAqVrfaedQGZiSRQb4x/9Znro7IwrvcZQwv\n+5LIRIoiZRABH6WV+e8UIX3PqBml4GrNoB/xC1JAr97UNNrNsOh+XLHnCgc8gLNW\nRmTxiVzMnwKBgD3FKnSI+0/LlwLO3e0LJ5PDeUMRSNehxEsDIEqycCGiLn/r7O+4\nCT/+t1RPz7TQktQZP1mHo+KZhMrUpG13FHC8lofoY8+N/gB64XflBHpxJsRX9dYR\ntpH/EFU2n7qwuV0wm3MUvMLnOBeQAfnAfibBtgCFj5oNkBhl+qc7U0tlAoGBAIzD\nsv3pV/xow/lgIHCzhdOdM2JGRuas6dKqNS+h+0E0JkltfOOw1Fai2/ttC012Yh2J\niHCHRuPkvLckwl8dtPZ0HjR1Q1V2HvA2lxkHqRHddRjL/YLm+q0wrhsuY8kNE6Rj\n0A0l5Fi3tYQM1rMsBWSNJH5KJQFgAwHuzuOzqS9RAoGATy2VSwvvEv/yP9UReeNx\nopMV/R4X1/Wclk80sISLmVVwOc0i7G/guhHnQpOmEelqZS4xe0UI7N3Y6krfx2R0\nfN3z74nhyDIvc8K7bbTQOIszmODKT+RUNwY3Lxl0z+TrpaE+DtQXBar0eVtBZT5A\ngxrpBWDtNWGR/a1aB4lqPuU=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-c4er2@discord-management-a1f7a.iam.gserviceaccount.com",
+    "client_id": "100099226706982304245",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-c4er2%40discord-management-a1f7a.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }

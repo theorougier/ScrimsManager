@@ -1,0 +1,68 @@
+import discord
+from discord.ext import commands
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+# Configuration de Firebase
+cred = credentials.Certificate("./config.json")
+firebase_admin.initialize_app(cred)
+db = firestore.client()
+
+# Configuration du bot Discord
+intents = discord.Intents.default()
+intents.messages = True
+bot = commands.Bot(command_prefix="!", intents=intents)
+
+# Vérification des rôles autorisés
+def is_authorized(ctx):
+    return any(role.name in ["Manager", "Assistant Manager"] for role in ctx.author.roles)
+
+# Commande help personnalisée
+@bot.command(name="help")
+async def custom_help(ctx):
+    help_message = (
+        "Voici les commandes disponibles et leur format :\n"
+        "!ajouter_pracc <date> <heure> <adversaire> <map> - Ajoute une pracc\n"
+        "!afficher_praccs - Affiche les praccs programmées\n"
+        "\nExemple d'utilisation : !ajouter_pracc 25/01 20:00 EquipeX Dust2"
+    )
+    await ctx.send(help_message)
+
+# Commande pour ajouter une date de pracc
+@bot.command(name="ajouter_pracc")
+async def ajouter_pracc(ctx, date: str, heure: str, adversaire: str, map: str):
+    if is_authorized(ctx):
+        # Ajouter les données à Firebase
+        doc_ref = db.collection("praccs").document()
+        doc_ref.set({
+            "date": date,
+            "heure": heure,
+            "adversaire": adversaire,
+            "map": map,
+            "serveur": ctx.guild.id
+        })
+        await ctx.send(f"Pracc ajouté pour le {date} à {heure} contre {adversaire} sur {map}.")
+    else:
+        await ctx.send("Vous n'avez pas l'autorisation pour cette commande.")
+
+# Commande pour afficher les praccs
+@bot.command(name="afficher_praccs")
+async def afficher_praccs(ctx):
+    if is_authorized(ctx):
+        praccs = db.collection("praccs").where("serveur", "==", ctx.guild.id).stream()
+        response = "Praccs à venir:\n"
+        for pracc in praccs:
+            data = pracc.to_dict()
+            response += f"- {data['date']} à {data['heure']}: {data['adversaire']} sur {data['map']}\n"
+        await ctx.send(response)
+    else:
+        await ctx.send("Vous n'avez pas l'autorisation pour cette commande.")
+
+# Gestion des commandes inconnues
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send("Commande inconnue. Tapez '!help' pour voir les commandes disponibles.")
+
+# Lancement du bot
+bot.run("VOTRE_TOKEN_DISCORD")
