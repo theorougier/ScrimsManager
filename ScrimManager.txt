@@ -65,4 +65,4 @@ async def on_command_error(ctx, error):
         await ctx.send("Commande inconnue. Tapez '!help' pour voir les commandes disponibles.")
 
 # Lancement du bot
-bot.run("VOTRE_TOKEN_DISCORD")
+bot.run("MTE5OTcwOTU3MDQ1MzQ4MzU0MA.Gl93-r.-TGkAokKQ8WqLwI2uQSkO1zZW1yM7bj_hrHmwo")
